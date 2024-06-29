@@ -87,24 +87,3 @@ local RIP_CD = false
             RIP_CD = false
         end
 end)
-
-    local RIPINHALF = Instance.new("Tool", PLR.Backpack)
-    RIPINHALF.Name = "Rip In Half [GLITCHED FULLY]"
-    RIPINHALF.CanBeDropped = false
-    RIPINHALF.RequiresHandle = false
-    RIPINHALF.Activated:connect(function()
-        local GrabbedPLR = CHAR.BodyEffects:FindFirstChild("Grabbed")
-        if GrabbedPLR.Value ~= nil then
-            if RIP_CD == true then return end
-            RIP_CD = true
-            local GrabbedCHAR = GrabbedPLR.Value
-
-            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("I'm gonna rip you in half now...", "All")   
-            GrabbedCHAR.RightUpperArm.Position = Vector3.new(0,-1200,0)
-            GrabbedCHAR.LeftUpperArm.Position = Vector3.new(0,-1200,0)
-            GrabbedCHAR.LowerTorso.Position = Vector3.new(0,-1200,0)
-            task.wait(.1)
-            game:GetService("ReplicatedStorage"):WaitForChild("MainEvent"):FireServer("Grabbing", false)
-            RIP_CD = false
-        end
-end)
