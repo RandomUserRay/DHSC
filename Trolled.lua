@@ -67,7 +67,7 @@ local CHAR = game:GetService("Players").LocalPlayer.Character
 local RIP_CD = false
 
     local RIPINHALF = Instance.new("Tool", PLR.Backpack)
-    RIPINHALF.Name = "Passive Rip"
+    RIPINHALF.Name = "Rip In Half"
     RIPINHALF.CanBeDropped = false
     RIPINHALF.RequiresHandle = false
     RIPINHALF.Activated:connect(function()
@@ -89,7 +89,7 @@ local RIP_CD = false
 end)
 
     local RIPINHALF = Instance.new("Tool", PLR.Backpack)
-    RIPINHALF.Name = "Passive Rip [FULLY GLITCHED]"
+    RIPINHALF.Name = "Rip In Half [GLITCHED FULLY]"
     RIPINHALF.CanBeDropped = false
     RIPINHALF.RequiresHandle = false
     RIPINHALF.Activated:connect(function()
