@@ -3,7 +3,7 @@
 
 // Misery Source || v1.0.5
 // Hi calls || << >>
-// Leaked by muqh
+// Leaked By muqh
 
 ]]--
 
@@ -16,11 +16,9 @@ end
 
 print("=")
   
-  if (not LPH_OBFUSCATED) then
-      LPH_NO_VIRTUALIZE = function(...) return (...) end;
-      LPH_JIT_MAX = function(...) return (...) end;
-      LPH_JIT_ULTRA = function(...) return (...) end;
-  end
+if not LPH_OBFUSCATED then
+    getfenv().LPH_NO_VIRTUALIZE = function(...) return (...) end;
+end
 
   print("CheckPoint 1")
   
